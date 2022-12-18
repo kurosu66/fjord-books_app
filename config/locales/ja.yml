@@ -29,8 +29,26 @@
 # To learn more, please read the Rails Internationalization guide
 # available at https://guides.rubyonrails.org/i18n.html.
 
-en:
-  Book was successfully created: "Book was successfully created"
-  Book was successfully updated: "Book was successfully updated"
-  Book was successfully destroyed: "Book was successfully destroyed"
-  Are you sure?: "Are you sure?"
+ja:
+  Books: "本の一覧"
+  Title: "タイトル"
+  Memo: "メモ"
+  Author: "著者"
+  Picture: "画像"
+  New Book: "新規作成"
+  Show: "詳細"
+  Edit: "編集"
+  Destroy: "削除"
+  Are you sure?: "削除します。よろしいですか？"
+  Back: "戻る"
+  Editing Book: "編集"
+  helpers:
+    submit:
+      create: "登録"
+      update: "更新"
+
+  Book was successfully created: "新規追加しました。"
+  Book was successfully updated: "更新しました。"
+  Book was successfully destroyed: "削除しました。"
+  error: "件のエラー:"
+  prohibited this book from being saved: "本の情報の保存時にエラーが発生しました。"
