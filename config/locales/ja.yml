@@ -35,20 +35,35 @@ ja:
   Memo: "メモ"
   Author: "著者"
   Picture: "画像"
-  New Book: "新規作成"
+#  New Book: "新規作成"
   Show: "詳細"
   Edit: "編集"
   Destroy: "削除"
   Are you sure?: "削除します。よろしいですか？"
   Back: "戻る"
-  Editing Book: "編集"
+#  Editing Book: "編集"
   helpers:
     submit:
       create: "登録"
       update: "更新"
 
-  Book was successfully created: "新規追加しました。"
-  Book was successfully updated: "更新しました。"
-  Book was successfully destroyed: "削除しました。"
-  error: "件のエラー:"
-  prohibited this book from being saved: "本の情報の保存時にエラーが発生しました。"
+#  error: "件のエラー:"
+#  prohibited this book from being saved: "本の情報の保存時にエラーが発生しました。"
+
+  books:
+    update:
+      successfully_updated: "更新しました。"
+#    create:
+#      successfully_created: "新規作成しました。"
+    destroy:
+      Book_was_successfully_destroyed: "削除しました。"
+    edit:
+      Editing_Book: "編集する"
+    form:
+      prohibited_this_book_from_being_saved: "本の情報の保存時にエラーが発生しました。"
+    new:
+      New_Book: "新規作成"
+    index:
+      Are_you_sure?: "削除します。よろしいですか？"
+  error: "エラー"
+  successfully_created: "新規作成しました。"
