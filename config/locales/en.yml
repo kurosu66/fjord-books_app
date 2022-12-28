@@ -34,3 +34,15 @@ en:
   Book was successfully updated: "Book was successfully updated"
   Book was successfully destroyed: "Book was successfully destroyed"
   Are you sure?: "Are you sure?"
+  Editing Book: "編集する"
+
+  activerecord:
+    models:
+      book: "Book"
+
+    attributes:
+      book:
+        author: "Author"
+        memo: "Memo"
+        picture: "Picture"
+        title: "Title"

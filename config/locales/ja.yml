@@ -31,11 +31,6 @@
 
 ja:
   Books: "本の一覧"
-  Title: "タイトル"
-  Memo: "メモ"
-  Author: "著者"
-  Picture: "画像"
-#  New Book: "新規作成"
   Show: "詳細"
   Edit: "編集"
   Destroy: "削除"
@@ -67,3 +62,12 @@ ja:
       Are_you_sure?: "削除します。よろしいですか？"
   error: "エラー"
   successfully_created: "新規作成しました。"
+  activerecord:
+    models:
+      book: "本"
+    attributes:
+      book:
+        title: "タイトル"
+        memo: "メモ"
+        author: "著者"
+        picture: "画像"
