@@ -30,27 +30,22 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 ja:
-#  books: "本の一覧"
   show: "詳細"
   edit: "編集"
   destroy: "削除"
   back: "戻る"
-#  Editing Book: "編集"
+  error: "エラー"
   helpers:
     submit:
       create: "登録"
       update: "更新"
-
-#  error: "件のエラー:"
-#  prohibited this book from being saved: "本の情報の保存時にエラーが発生しました。"
-
   books:
     update:
       successfully_updated: "更新しました。"
-#    create:
-#      successfully_created: "新規作成しました。"
+    create:
+      successfully_created: "新規作成しました。"
     destroy:
-      Book_was_successfully_destroyed: "削除しました。"
+      successfully_destroyed: "削除しました。"
     edit:
       Editing_Book: "編集する"
     form:
@@ -60,11 +55,11 @@ ja:
     index:
       Are_you_sure?: "削除します。よろしいですか？"
       new_book: "新規作成"
-  error: "エラー"
-  successfully_created: "新規作成しました。"
   activerecord:
     models:
-      book: "本"
+      book:
+        one: "本"
+        other: "本の一覧"
     attributes:
       book:
         title: "タイトル"
