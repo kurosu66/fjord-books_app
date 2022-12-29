@@ -30,16 +30,34 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  Book was successfully created: "Book was successfully created"
-  Book was successfully updated: "Book was successfully updated"
-  Book was successfully destroyed: "Book was successfully destroyed"
-  Are you sure?: "Are you sure?"
-  Editing Book: "編集する"
-
+  show: "Show"
+  edit: "Edit"
+  destroy: "Destroy"
+  back: "Back"
+  error: "Error"
+  new: "New Book"
+  helpers:
+    submit:
+      create: "Create"
+      update: "Update"
+  books:
+    update:
+      successfully_updated: "Book was successfully updated."
+    create:
+      successfully_created: "Book was successfully created."
+    destroy:
+      successfully_destroyed: "Book was successfully destroyed."
+    edit:
+      Editing_Book: "Editing Book"
+    form:
+      prohibited_this_book_from_being_saved: "prohibited this book from being saved."
+    index:
+      Are_you_sure?: "Are you sure?"
   activerecord:
     models:
-      book: "Book"
-
+      book:
+        one: "Book"
+        other: "Books"
     attributes:
       book:
         author: "Author"

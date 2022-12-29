@@ -35,6 +35,7 @@ ja:
   destroy: "削除"
   back: "戻る"
   error: "エラー"
+  new: "新規作成"
   helpers:
     submit:
       create: "登録"
@@ -50,11 +51,8 @@ ja:
       Editing_Book: "編集する"
     form:
       prohibited_this_book_from_being_saved: "本の情報の保存時にエラーが発生しました。"
-    new:
-      new_book: "新規作成"
     index:
       Are_you_sure?: "削除します。よろしいですか？"
-      new_book: "新規作成"
   activerecord:
     models:
       book:
