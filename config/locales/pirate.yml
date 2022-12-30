@@ -1,7 +1,0 @@
-pirate:
-  hello_world: Ahoy World
-  hello_flash: Ahoy Flash
-  time:
-    formats:
-      short: "arrrround %H'ish"
-  Editing Book: "a"
