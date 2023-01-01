@@ -48,11 +48,11 @@ en:
     destroy:
       successfully_destroyed: "Book was successfully destroyed."
     edit:
-      Editing_Book: "Editing Book"
+      editing_Book: "Editing Book"
     form:
       prohibited_this_book_from_being_saved: "prohibited this book from being saved."
     index:
-      Are_you_sure?: "Are you sure?"
+      are_you_sure?: "Are you sure?"
   activerecord:
     models:
       book:

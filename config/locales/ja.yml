@@ -48,11 +48,11 @@ ja:
     destroy:
       successfully_destroyed: "削除しました。"
     edit:
-      Editing_Book: "編集する"
+      editing_Book: "編集する"
     form:
       prohibited_this_book_from_being_saved: "本の情報の保存時にエラーが発生しました。"
     index:
-      Are_you_sure?: "削除します。よろしいですか？"
+      are_you_sure?: "削除します。よろしいですか？"
   activerecord:
     models:
       book:
