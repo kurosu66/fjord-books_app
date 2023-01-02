@@ -29,38 +29,38 @@
 # To learn more, please read the Rails Internationalization guide
 # available at https://guides.rubyonrails.org/i18n.html.
 
-en:
-  show: "Show"
-  edit: "Edit"
-  destroy: "Destroy"
-  back: "Back"
-  error: "Error"
-  new: "New Book"
+ja:
+  show: "詳細"
+  edit: "編集"
+  destroy: "削除"
+  back: "戻る"
+  error: "エラー"
+  new: "新規作成"
   helpers:
     submit:
-      create: "Create"
-      update: "Update"
+      create: "登録"
+      update: "更新"
   books:
     update:
-      successfully_updated: "Book was successfully updated."
+      successfully_updated: "更新しました。"
     create:
-      successfully_created: "Book was successfully created."
+      successfully_created: "新規作成しました。"
     destroy:
-      successfully_destroyed: "Book was successfully destroyed."
+      successfully_destroyed: "削除しました。"
     edit:
-      editing_Book: "Editing Book"
+      editing_Book: "編集する"
     form:
-      prohibited_this_book_from_being_saved: "prohibited this book from being saved."
+      prohibited_this_book_from_being_saved: "本の情報の保存時にエラーが発生しました。"
     index:
-      are_you_sure?: "Are you sure?"
+      are_you_sure?: "削除します。よろしいですか？"
   activerecord:
     models:
       book:
-        one: "Book"
-        other: "Books"
+        one: "本"
+        other: "本の一覧"
     attributes:
       book:
-        author: "Author"
-        memo: "Memo"
-        picture: "Picture"
-        title: "Title"
+        title: "タイトル"
+        memo: "メモ"
+        author: "著者"
+        picture: "画像"
