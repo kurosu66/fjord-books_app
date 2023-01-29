@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= User.model_name.human %></h1>
+<%= link_to t('views.common.books'), books_path %>
+<%= link_to t('views.common.logout'), destroy_user_session_path, method: :delete %>
+
+<table>
+  <thead>
+  <tr>
+    <th><%= User.human_attribute_name(:id) %></th>
+    <th><%= User.human_attribute_name(:name) %></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @users.each do |user| %>
+    <tr>
+      <td><%= user.id %></td>
+      <td><%= user.name %></td>
+      <td><%= link_to t('views.common.show'), user %></td>
+      <td><%= link_to t('views.common.edit'), edit_user_path(user) %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<%#= paginate @users %>
+
+<br>

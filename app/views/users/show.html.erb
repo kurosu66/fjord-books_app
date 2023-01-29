@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong><%= User.human_attribute_name(:id) %>:</strong>
+  <%= @user.id %>
+</p>
+
+<p>
+  <strong><%= User.human_attribute_name(:name) %>:</strong>
+  <%= @user.name %>
+</p>
+
+<!--<%#= link_to t('views.common.edit'), edit_book_path(@book) %> |-->
+<%= link_to t('views.common.back'), users_path %>
