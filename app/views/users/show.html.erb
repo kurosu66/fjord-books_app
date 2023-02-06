@@ -24,6 +24,7 @@
   <strong><%= User.human_attribute_name(:introduction) %>:</strong>
   <%= @user.introduction %>
 </p>
-
-<%= link_to t('views.common.edit'), edit_user_path(@user) %> |
+<% if @user == current_user %>
+  <%= link_to t('views.common.edit'), edit_user_path(@user) %> |
+<% end %>
 <%= link_to t('views.common.back'), users_path %>

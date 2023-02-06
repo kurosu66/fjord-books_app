@@ -18,7 +18,9 @@
       <td><%= user.id %></td>
       <td><%= user.name %></td>
       <td><%= link_to t('views.common.show'), user %></td>
+      <% if user == current_user %>
       <td><%= link_to t('views.common.edit'), edit_user_path(user) %></td>
+      <% end %>
     </tr>
   <% end %>
   </tbody>
