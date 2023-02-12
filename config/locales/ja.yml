@@ -219,12 +219,19 @@ ja:
       logout: "ログアウト"
       users: "ユーザー"
       books: "書籍一覧"
+      log_in: "ログイン"
+      sign_up: "アカウント登録"
+      characters_minimum: "文字以上入力してください"
+      update: "更新"
     pagination:
       first: '最初'
       last: '最後'
       previous: '前'
       next: '次'
       truncate: '...'
+    forgot_your_password?: "パスワードを忘れた方はこちら"
+    didn't_receive_unlock_instructions?: "パスワード再設定メールが送信されませんか？"
+    didn't_receive_confirmation_instructions?: "パスワード確認メールが届きませんか？"
   controllers:
     common:
       notice_create: "%{name}が作成されました。"
@@ -232,8 +239,7 @@ ja:
       notice_destroy: "%{name}が削除されました。"
   Cancel_my_account: "アカウント削除"
   leave_blank_if_you_don't_want_to_change_it: "変更しない場合は、空欄のままにしてください"
-  characters_minimum: "文字以上入力してください"
-  update: "更新"
   change_mail_and_password: "メール、パスワード変更"
   change_user_info: "ユーザー情報の変更"
   edit_user: "ユーザー情報の編集"
+  send_me_reset_password_instructions: "パスワード再設定メール送信"
