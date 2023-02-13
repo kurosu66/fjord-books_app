@@ -1,6 +1,6 @@
-<h2><%= t('edit_user')%></h2>
+<h2><%= t('views.edit_user.edit_user')%></h2>
 
-<h3><%= t('change_mail_and_password') %></h3>
+<h3><%= t('views.edit_user.change_mail_and_password') %></h3>
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "users/shared/error_messages", resource: resource %>
 
@@ -19,11 +19,11 @@
   </div>
 
   <div class="field">
-    <%= f.label :password %> <i><%= t("leave_blank_if_you_don't_want_to_change_it") %></i><br />
+    <%= f.label :password %> <i><%= t("views.edit_user.leave_blank_if_you_don't_want_to_change_it") %></i><br />
     <%= f.password_field :password, autocomplete: "new-password" %>
     <% if @minimum_password_length %>
       <br />
-      <em><%= @minimum_password_length %> <%= t('characters_minimum') %></em>
+      <em><%= @minimum_password_length %> <%= t('views.common.characters_minimum') %></em>
     <% end %>
   </div>
 
@@ -32,7 +32,7 @@
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
-  <h3><%= t('change_user_info') %></h3>
+  <h3><%= t('views.edit_user.change_user_info') %></h3>
   <div class="field">
     <%= f.label :name %>
     <%= f.text_field :name %>
@@ -58,7 +58,7 @@
   </div>
 <% end %>
 
-<h3> <%= t('Cancel_my_account') %></h3>
+<h3> <%= t('views.edit_user.cancel_my_account') %></h3>
 
 <p><%= button_to t('views.common.destroy'), registration_path(resource_name), data: { confirm: t('views.common.delete_confirm') }, method: :delete %></p>
 
