@@ -8,6 +8,8 @@
       <th><%= User.human_attribute_name(:postal_code) %></th>
       <th><%= User.human_attribute_name(:address) %></th>
       <th></th>
+      <th><%= User.human_attribute_name(:avatar) %></th>
+      <th></th>
     </tr>
   </thead>
 
@@ -19,6 +21,9 @@
         <td><%= user.postal_code %></td>
         <td><%= user.address %></td>
         <td><%= link_to t('views.common.show'), user %></td>
+        <% if user.avatar.attached? %>
+            <%= image_tag user.avatar %>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
