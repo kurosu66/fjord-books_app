@@ -11,6 +11,12 @@
 </p>
 
 <p>
+<% if @user.avatar.attached? %>
+  <%= image_tag @user.avatar %>
+<% end %>
+</p>
+
+<p>
   <strong><%= User.human_attribute_name(:postal_code) %>:</strong>
   <%= @user.postal_code %>
 </p>
