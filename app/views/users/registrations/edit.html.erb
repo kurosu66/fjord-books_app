@@ -1,6 +1,6 @@
-<h2><%= t('views.edit_user.edit_user') %></h2>
+<h2><%= t('users.registrations.edit.update') %></h2>
 
-<h3><%= t('views.edit_user.change_mail_and_password') %></h3>
+<h3><%= t('users.registrations.change_mail_and_password') %></h3>
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "users/shared/error_messages", resource: resource %>
 
@@ -19,11 +19,11 @@
   </div>
 
   <div class="field">
-    <%= f.label :password %> <i><%= t("views.edit_user.leave_blank_if_you_don't_want_to_change_it") %></i><br />
+    <%= f.label :password %> <i><%= t("users.registrations.edit.leave_blank_if_you_don_t_want_to_change_it") %></i><br />
     <%= f.password_field :password, autocomplete: "new-password" %>
     <% if @minimum_password_length %>
       <br />
-      <em><%= @minimum_password_length %> <%= t('views.common.characters_minimum') %></em>
+      <em><%= t('users.shared.minimum_password_length', count: @minimum_password_length) %></em>
     <% end %>
   </div>
 
@@ -32,7 +32,7 @@
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
-  <h3><%= t('views.edit_user.change_user_info') %></h3>
+  <h3><%= t('users.registrations.change_user_info') %></h3>
   <div class="field">
     <%= f.label :name %>
     <%= f.text_field :name %>
@@ -41,6 +41,8 @@
   <div class="field">
     <%= f.label :postal_code %>
     <%= f.text_field :postal_code %>
+    <br />
+    <em><%= t('users.registrations.edit.please_enter_numbers_only') %></em>
   </div>
 
   <div class="field">
@@ -54,12 +56,12 @@
   </div>
 
   <div class="actions">
-    <%= f.submit t('views.common.update') %>
+    <%= f.submit t('users.registrations.edit.update') %>
   </div>
 <% end %>
 
-<h3> <%= t('views.edit_user.cancel_my_account') %></h3>
+<h3> <%= t('users.registrations.edit.cancel_my_account') %></h3>
 
-<p><%= button_to t('views.common.destroy'), registration_path(resource_name), data: { confirm: t('views.common.delete_confirm') }, method: :delete %></p>
+<p><%= button_to t('users.registrations.edit.cancel_my_account'), registration_path(resource_name), data: { confirm: t('users.registrations.edit.are_you_sure') }, method: :delete %></p>
 
-<%= link_to t('views.common.back'), :back %>
+<%= link_to t('users.shared.links.back'), :back %>

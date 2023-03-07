@@ -25,6 +25,6 @@
   <%= @user.introduction %>
 </p>
 <% if @user == current_user %>
-  <%= link_to t('views.common.edit'), edit_user_path(@user) %> |
+  <%= link_to t('views.common.edit'), edit_user_registration_path %>
 <% end %>
 <%= link_to t('views.common.back'), users_path %>

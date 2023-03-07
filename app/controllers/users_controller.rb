@@ -8,9 +8,9 @@ class UsersController < ApplicationController
     @users = User.page(params[:page]).order(id: :asc)
   end
 
-  def show; end
+  # def show; end
 
-  def edit; end
+  # def edit; end
 
   def update
     User.find(params[:id]).update(user_params)

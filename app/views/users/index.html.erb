@@ -9,6 +9,7 @@
   <tr>
     <th><%= User.human_attribute_name(:id) %></th>
     <th><%= User.human_attribute_name(:name) %></th>
+    <th colspan="2"><%= t('views.common.operation') %></th>
   </tr>
   </thead>
 
@@ -19,7 +20,7 @@
       <td><%= user.name %></td>
       <td><%= link_to t('views.common.show'), user %></td>
       <% if user == current_user %>
-      <td><%= link_to t('views.common.edit'), edit_user_registration_path(user) %></td>
+        <td><%= link_to t('views.common.edit'), edit_user_registration_path %></td>
       <% end %>
     </tr>
   <% end %>
