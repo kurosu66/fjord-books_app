@@ -8,10 +8,6 @@ class UsersController < ApplicationController
     @users = User.page(params[:page]).order(id: :asc)
   end
 
-  # def show; end
-
-  # def edit; end
-
   def update
     User.find(params[:id]).update(user_params)
     redirect_to @user, notice: t('controllers.common.notice_update', name: User.model_name.human)
