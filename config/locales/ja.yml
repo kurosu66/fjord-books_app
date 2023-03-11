@@ -217,26 +217,8 @@ ja:
       title_edit: "%{name}の編集"
       users_index: "ユーザー一覧"
       logout: "ログアウト"
-      users: "ユーザー"
       books: "書籍一覧"
-      update: "更新"
-      characters_minimum: "文字以上入力してください"
       operation: "操作"
-    edit_user:
-      Cancel_my_account: "アカウント削除"
-      leave_blank_if_you_don't_want_to_change_it: "変更しない場合は、空欄のままにしてください"
-      change_mail_and_password: "メール、パスワード変更"
-      change_user_info: "ユーザー情報の変更"
-      edit_user: "ユーザー情報の編集"
-      cancel_my_account: "アカウント削除"
-    account:
-      log_in: "ログイン"
-      sign_up: "アカウント登録"
-      characters_minimum: "文字以上入力してください"
-      send_me_reset_password_instructions: "パスワード再設定メール送信"
-      forgot_your_password?: "パスワードを忘れた方はこちら"
-      didn't_receive_unlock_instructions?: "パスワード再設定メールが送信されませんか？"
-      didn't_receive_confirmation_instructions?: "パスワード確認メールが届きませんか？"
     pagination:
       first: '最初'
       last: '最後'
