@@ -218,7 +218,6 @@ ja:
       users_index: "ユーザー一覧"
       logout: "ログアウト"
       books: "書籍一覧"
-      operation: "操作"
     pagination:
       first: '最初'
       last: '最後'
