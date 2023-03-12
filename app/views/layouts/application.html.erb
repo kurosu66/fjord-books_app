@@ -10,6 +10,11 @@
   </head>
 
   <body>
-  <%= yield %>
+    <% if user_signed_in? %>
+      <%= link_to t('views.common.books'), books_path %> |
+      <%= link_to t('views.common.users_index'), users_path %> |
+    <% end %>
+    <%= link_to t('views.common.logout'), destroy_user_session_path, method: :delete %>
+    <%= yield %>
   </body>
 </html>

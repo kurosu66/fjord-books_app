@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_03_09_110339) do
+ActiveRecord::Schema.define(version: 2023_03_12_062825) do
 
   create_table "books", force: :cascade do |t|
     t.string "title"
@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 2023_03_09_110339) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "name"
     t.string "postal_code"
-    t.text "address"
+    t.string "address"
     t.text "introduction"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
