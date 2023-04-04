@@ -11,9 +11,9 @@
 </p>
 
 <p>
-<% if @user.avatar.attached? %>
-  <%= image_tag @user.avatar %>
-<% end %>
+  <%= image_tag(@user.avatar) if @user.avatar.present? %>
+<!--  2023/04/03 リサイズ variantメソッドを調べる-->
+  <%#= image_tag @user.avatar.variant(resize: "100x100") if @user.avatar.present? %>
 </p>
 
 <p>
