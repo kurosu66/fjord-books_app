@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= User.model_name.human %></h1>
+
+<table>
+  <thead>
+  <tr>
+    <th><%= User.human_attribute_name(:name) %></th>
+    <th><%= t('views.common.show') %></th>
+    <th><%= t('views.common.edit') %></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @users.each do |user| %>
+    <tr>
+      <td><%= user.name %></td>
+      <td><%= link_to t('views.common.show'), user %></td>
+      <td>
+        <% if user == current_user %>
+          <%= link_to t('views.common.edit'), edit_user_registration_path %>
+        <% end %>
+      </td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<%= paginate @users %>
