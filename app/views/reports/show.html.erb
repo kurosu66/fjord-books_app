@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <p>
   <strong>Title:</strong>
   <%= @report.title %>
@@ -10,10 +8,18 @@
   <%= @report.content %>
 </p>
 
-<p>
-  <strong>User:</strong>
-  <%= @report.user_id %>
-</p>
+
+<!--<p>-->
+<!--  <strong>User:</strong>-->
+  <%# if @report.user.name == nil %>
+    <%#= @report.user.email %>
+  <%# else %>
+    <%#= @report.user.name %>
+  <%# end %>
+<!--</p>-->
+
+<%= render 'comments/comments', comments: @comments  %>
+<%= render 'comments/form', commentable: @report, comment: @comment  %>
 
 <%= link_to 'Edit', edit_report_path(@report) %> |
 <%= link_to 'Back', reports_path %>
