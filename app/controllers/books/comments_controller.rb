@@ -1,23 +1,25 @@
 # frozen_string_literal: true
 
 class Books::CommentsController < ApplicationController
-  before_action :set_commentable, only: %i[create update]
+  before_action :set_commentable, only: %i[create destroy]
+
   def create
     @comment = @commentable.comments.build(comment_params)
     @comment.user = current_user
     if @comment.save
-      redirect_to @commentable, notice: 'success'
+      redirect_to @commentable, notice: t('comments.create.notice')
     else
-      # TODO: 失敗した場合は入力していた内容を表示する
-      redirect_to @commentable, notice: '失敗!!'
+      redirect_to @commentable, alert: t('comments.failed.notice')
     end
   end
 
   def update
-
   end
 
   def destroy
+    @comment = Comment.find(params[:id])
+    @comment.destroy
+    redirect_to @commentable, notice: t('comments.destroy.notice')
   end
 
   private

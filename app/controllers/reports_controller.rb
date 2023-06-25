@@ -20,15 +20,14 @@ class ReportsController < ApplicationController
   end
 
   # GET /reports/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /reports or /reports.json
   def create
     @report = Report.new(report_params)
     @report.user = current_user
     if @report.save
-      redirect_to @report, notice: "Report was successfully created."
+      redirect_to @report, notice: t('controllers.common.notice_create', name: Report.model_name.human)
     else
       render :new, status: :unprocessable_entity
     end
@@ -37,7 +36,7 @@ class ReportsController < ApplicationController
   # PATCH/PUT /reports/1 or /reports/1.json
   def update
     if @report.update(report_params)
-      redirect_to report_url(@report), notice: "Report was successfully updated."
+      redirect_to report_url(@report), notice: t('controllers.common.notice_update', name: Report.model_name.human)
     else
       render :edit, status: :unprocessable_entity
     end
@@ -46,7 +45,7 @@ class ReportsController < ApplicationController
   # DELETE /reports/1 or /reports/1.json
   def destroy
     @report.destroy
-    redirect_to reports_url, notice: "Report was successfully destroyed."
+    redirect_to reports_url, notice: t('controllers.common.notice_destroy', name: Report.model_name.human)
   end
 
   private
