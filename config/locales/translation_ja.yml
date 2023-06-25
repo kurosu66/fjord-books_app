@@ -16,3 +16,6 @@ ja:
         address: 住所
         self_introduction: 自己紹介文
         avatar: ユーザ画像
+      comment:
+        content: コメント
+        created_at: 投稿日

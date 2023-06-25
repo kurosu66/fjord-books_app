@@ -10,9 +10,7 @@ class ReportsController < ApplicationController
 
   # GET /reports/1 or /reports/1.json
   def show
-    # @report = Report.find(params[:id])
     @comment = Comment.new
-    # @comments = Comment.where(commentable_type: 'Report', commentable_id: 1, user_id: current_user.id)
     @comments = @report.comments
   end
 

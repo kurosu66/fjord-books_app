@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
 class Reports::CommentsController < ApplicationController
-  before_action :set_commentable, only: %i[create update]
+  before_action :set_commentable, only: %i[create update destroy]
+
   def create
     @comment = @commentable.comments.build(comment_params)
     @comment.user = current_user
@@ -17,6 +18,10 @@ class Reports::CommentsController < ApplicationController
   end
 
   def destroy
+    @comment = Comment.find(params[:id])
+    @comment.destroy
+
+    redirect_to @commentable, notice: 'コメントを削除しました。'
   end
 
   private
