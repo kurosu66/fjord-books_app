@@ -12,10 +12,8 @@
   <tr>
     <td><%= comment.content %></td>
     <td><%= comment.user.name.blank? ? comment.user.email : comment.user.name %></td>
-    <td><%= comment.created_at.strftime("%Y-%m-%d %H:%M") %></td>
-    <% if current_user == comment.user %>
-      <td><%= link_to t('views.common.destroy'), polymorphic_path([commentable, comment]), method: :delete, data: { confirm: t('views.common.delete_confirm') } %></td>
-    <% end %>
+    <td><%= l comment.created_at, format: :short %></td>
+      <td><%= link_to t('views.common.destroy'), polymorphic_path([commentable, comment]), method: :delete, data: { confirm: t('views.common.delete_confirm') } if current_user == comment.user %></td>
   </tr>
   <% end %>
   </tbody>

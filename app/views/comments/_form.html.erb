@@ -12,8 +12,8 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :comment %>
-    <%= form.text_area :content %>
+    <%= form.label :comment, Comment.model_name.human %>
+    <%= form.text_area :content, required: true %>
   </div>
 
   <div class="actions">
