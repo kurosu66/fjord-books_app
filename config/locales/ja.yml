@@ -1,6 +1,7 @@
 ---
 ja:
   activerecord:
+    error: "つのエラー"
     errors:
       messages:
         record_invalid: 'バリデーションに失敗しました: %{errors}'
@@ -257,6 +258,8 @@ ja:
       notice: "コメントを削除しました。"
     failed:
       notice: "コメントの投稿に失敗しました。"
+    form:
+      prohibited_this_comment_from_being_saved: "コメントの保存に失敗しました"
   # devise-i18n-viewsをオーバーライド
   devise:
     registrations:
