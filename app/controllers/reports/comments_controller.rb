@@ -6,16 +6,18 @@ class Reports::CommentsController < ApplicationController
   def create
     @comment = @commentable.comments.build(comment_params)
     @comment.user = current_user
+    @report = Report.find(params[:report_id])
     if @comment.save
       redirect_to @commentable, notice: t('comments.create.notice')
     else
-      redirect_to @commentable, alert: t('comments.failed.notice')
+      @comments = @report.comments
+      render :'reports/show'
     end
   end
 
   def destroy
     @comment = Comment.find(params[:id])
-    @comment.destroy
+    @comment.destroy!
     redirect_to @commentable, notice: t('comments.destroy.notice')
   end
 

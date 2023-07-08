@@ -6,10 +6,12 @@ class Books::CommentsController < ApplicationController
   def create
     @comment = @commentable.comments.build(comment_params)
     @comment.user = current_user
+    @book = Book.find(params[:book_id])
     if @comment.save
       redirect_to @commentable, notice: t('comments.create.notice')
     else
-      redirect_to @commentable, alert: t('comments.failed.notice')
+      @comments = @book.comments
+      render :'books/show'
     end
   end
 
